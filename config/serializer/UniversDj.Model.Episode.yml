@@ -1,0 +1,16 @@
+UniversDj\Model\Episode:
+    exclusion_policy: ALL
+    xml_root_name: episode
+    properties:
+        id:
+            expose: true
+        name:
+            expose: true
+            type: string
+        url:
+            expose: true
+            read_only: true
+            type: string
+            access_type: public_method
+            accessor: 
+                getter: getUrl

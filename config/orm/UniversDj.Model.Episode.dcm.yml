@@ -1,0 +1,24 @@
+UniversDj\Model\Episode:
+  type: entity
+  table: episodes
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+    filename:
+      type: string
+      nullable: true
+    url:
+      type: string
+      nullable: true
+  manyToOne:
+    mixshow:
+      targetEntity: UniversDj\Model\Mixshow
+      joinColumn:
+        name: mixshow_id
+        referencedColumnName: id
+

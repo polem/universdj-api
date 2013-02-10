@@ -1,0 +1,22 @@
+UniversDj\Model\Mixshow:
+  type: entity
+  table: mixshows
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+  oneToMany:
+    episodes:
+      targetEntity: Episode
+      mappedBy: mixshow
+      cascade: ["persist", "merge"]
+  manyToOne:
+    dj:
+      targetEntity: UniversDj\Model\Dj
+      joinColumn:
+        name: dj_id
+        referencedColumnName: id

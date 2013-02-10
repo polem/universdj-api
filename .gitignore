@@ -1,0 +1,6 @@
+cache
+.DS_Store
+www/uploads
+composer.lock
+composer.phar
+vendor

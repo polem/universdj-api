@@ -1,0 +1,13 @@
+UniversDj\Model\Mixshow:
+    exclusion_policy: ALL
+    xml_root_name: mixshow
+    properties:
+        id:
+            expose: true
+        name:
+            expose: true
+            type: string
+        episodes:
+            expose: true
+        dj:
+            expose: true

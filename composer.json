@@ -1,0 +1,15 @@
+{
+    "require": {
+        "silex/silex": "1.0.*",
+        "jms/serializer": "dev-master",
+        "doctrine/orm": "dev-master",
+        "symfony/yaml": "dev-master",
+        "dflydev/doctrine-orm-service-provider": "dev-master",
+        "flintstones/rest": "*",
+        "symfony/security": "*"
+    },
+    "autoload": {
+        "psr-0": {"UniversDj": "src/"}
+    },
+    "minimum-stability": "dev"
+}

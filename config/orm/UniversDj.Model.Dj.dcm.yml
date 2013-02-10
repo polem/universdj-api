@@ -1,0 +1,20 @@
+UniversDj\Model\Dj:
+  type: entity
+  table: djs
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+    biography:
+      type: text
+    picture:
+      type: text
+  oneToMany:
+    episodes:
+      targetEntity: Episode
+      mappedBy: mixshow
+      cascade: ["persist", "merge"]
