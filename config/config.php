@@ -4,6 +4,7 @@ use UniversDj\Security\UserProvider;
 use Dflydev\Silex\Provider\DoctrineOrm\DoctrineOrmServiceProvider;
 use Silex\Provider\DoctrineServiceProvider;
 use Symfony\Component\Security\Core\Encoder\PlaintextPasswordEncoder;
+use Symfony\Component\HttpFoundation\RequestMatcher;
 
 $app['debug'] = true;
 
@@ -35,6 +36,7 @@ $app->register(new DoctrineServiceProvider, array(
 $app->register(new Silex\Provider\SecurityServiceProvider(), array(
     'security.firewalls' => array(
         'default' => array(
+            'pattern' => new RequestMatcher(null, null, array('POST', 'DELETE', 'PUT'), null, array()),
             'security' => true,
             'http' => true,
             'stateless' => true,
